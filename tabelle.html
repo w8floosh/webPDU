@@ -70,110 +70,108 @@
 
     <p id="modulo">
         <form>
-            <table width="500">
-                <table>
-                    <tr>
-                        <th align="left" colspan="6">Registrazione utente</th>
+            <table>
+                <tr>
+                    <th align="left" width="500" colspan="6">Registrazione utente</th>
+                </tr>
+                <tr>
+                    <td colspan="3">Indirizzo email</td>
+                    <td colspan="3">Conferma email</td>
+                </tr>
+                <tr>
+                    <td colspan="3"><input size="30" type="email" placeholder="prova@example.com"/></td>
+                    <td colspan="3"><input size="30" type="email" placeholder="prova@example.com"/></td>
+                </tr>
+                <tr>
+                    <td colspan="3">Password</td>
+                    <td colspan="3">Conferma password</td>
+                </tr>
+                <tr>
+                    <td colspan="3"><input size="30" type="password" placeholder="Digita la password"/></td>
+                    <td colspan="3"><input size="30" type="password" placeholder="Ridigita la password"/></td>
+                </tr>
+                <tr>
+                    <td colspan="6"><hr color="red" size="3"></td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <th width="500" colspan="6"></th>
+                </tr>
+                <tr>
+                    <td colspan="2">Nome</th>
+                    <td colspan="2">Secondo nome</th>
+                    <td colspan="2">Cognome</th>
+                </tr>
+                <tr>
+                    <td colspan="2"><input size="18" type="text" placeholder="Mario"/></td>
+                    <td colspan="2"><input size="18" type="text" placeholder="Super"/></td>
+                    <td colspan="2"><input size="18" type="text" placeholder="Rossi"/></td>
+                </tr>
+                <tr>
+                    <td colspan="2">Sesso</th>
+                    <td colspan="4">Città e indirizzo</th>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <select name="select">
+                            <option value="m">Uomo</option>
+                            <option value="f">Donna</option>
+                            <option value="ns">Preferisco non dirlo</option>
+                        </select>
+                    </td>
+                    <td colspan="4"><input size="43" type="text" placeholder="Via Milo 1, Catania"/></td>
+                </tr>
+                <tr>
+                    <td colspan="6"><hr color="red" size="3"></td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <th width="500" colspan="6"></th>
+                </tr>
+                <tr>
+                    <td colspan="3">Interessi</th>
+                    <td colspan="3">Sistema utilizzato</th>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <table border="1">
+                            <td>
+                                <input type="checkbox" name="interests" value="videogame"/>Videogame <br>
+                                <input type="checkbox" name="interests" value="arte"/>Arte <br>
+                                <input type="checkbox" name="interests" value="fotografia"/>Fotografia <br>
+                                <input type="checkbox" name="interests" value="alcool"/>Alcool <br>
+                            </td>
+                        </table>
+                    </td>
+                    <td colspan="3">
+                        <table border="1">
+                            <td>
+                                <input type="radio" name="system"/>Windows <br>
+                                <input type="radio" name="system"/>Linux <br>
+                                <input type="radio" name="system"/>MacOS <br>
+                                <input type="radio" name="system"/>DOS <br>
+                            </td>
+                        </table>
                     </tr>
-                    <tr>
-                        <td colspan="3">Indirizzo email</td>
-                        <td colspan="3">Conferma email</td>
-                    </tr>
-                    <tr>
-                        <td colspan="3"><input size="30" type="email" placeholder="prova@example.com"/></td>
-                        <td colspan="3"><input size="30" type="email" placeholder="prova@example.com"/></td>
-                    </tr>
-                    <tr>
-                        <td colspan="3">Password</td>
-                        <td colspan="3">Conferma password</td>
-                    </tr>
-                    <tr>
-                        <td colspan="3"><input size="30" type="password" placeholder="Digita la password"/></td>
-                        <td colspan="3"><input size="30" type="password" placeholder="Ridigita la password"/></td>
-                    </tr>
-                    <tr>
-                        <td colspan="6"><hr color="red" size="3"></td>
-                    </tr>
-                </table>
-                <table>
-                    <tr>
-                        <th width="500" colspan="6"></th>
-                    </tr>
-                    <tr>
-                        <td colspan="2">Nome</th>
-                        <td colspan="2">Secondo nome</th>
-                        <td colspan="2">Cognome</th>
-                    </tr>
-                    <tr>
-                        <td colspan="2"><input size="18" type="text" placeholder="Mario"/></td>
-                        <td colspan="2"><input size="18" type="text" placeholder="Super"/></td>
-                        <td colspan="2"><input size="18" type="text" placeholder="Rossi"/></td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">Sesso</th>
-                        <td colspan="4">Città e indirizzo</th>
-                    </tr>
-                    <tr>
-                        <td colspan="2">
-                            <select name="select">
-                                <option value="m">Uomo</option>
-                                <option value="f">Donna</option>
-                                <option value="ns">Preferisco non dirlo</option>
-                            </select>
-                        </td>
-                        <td colspan="4"><input size="43" type="text" placeholder="Via Milo 1, Catania"/></td>
-                    </tr>
-                    <tr>
-                        <td colspan="6"><hr color="red" size="3"></td>
-                    </tr>
-                </table>
-                <table>
-                    <tr>
-                        <th width="500" colspan="6"></th>
-                    </tr>
-                    <tr>
-                        <td colspan="3">Interessi</th>
-                        <td colspan="3">Sistema utilizzato</th>
-                    </tr>
-                    <tr>
-                        <td colspan="3">
-                            <table border="1">
-                                <td>
-                                    <input type="checkbox" name="interests" value="videogame"/>Videogame <br>
-                                    <input type="checkbox" name="interests" value="arte"/>Arte <br>
-                                    <input type="checkbox" name="interests" value="fotografia"/>Fotografia <br>
-                                    <input type="checkbox" name="interests" value="alcool"/>Alcool <br>
-                                </td>
-                            </table>
-                        </td>
-                        <td colspan="3">
-                            <table border="1">
-                                <td>
-                                    <input type="radio" name="system"/>Windows <br>
-                                    <input type="radio" name="system"/>Linux <br>
-                                    <input type="radio" name="system"/>MacOS <br>
-                                    <input type="radio" name="system"/>DOS <br>
-                                </td>
-                            </table>
-                        </tr>
-                    <tr>
-                        <td colspan="6"><hr color="red" size="3"></td>
-                    </tr>
-                </table>
-                <table>
-                    <tr>
-                        <th width="500" colspan="6"></th>
-                    </tr>
-                    <tr>
-                        <td colspan="6" align="center">Accetti le condizioni?</td>
-                    </tr>
-                    <tr>
-                        <td colspan="6" align="center"><input type="checkbox" name="tc"/>Accetto</td>
-                    </tr>
-                    <tr>
-                        <td colspan="6" align="right"><input type="submit" value="Registrati"/></td>
-                    </tr>
-                </table>
+                <tr>
+                    <td colspan="6"><hr color="red" size="3"></td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <th width="500" colspan="6"></th>
+                </tr>
+                <tr>
+                    <td colspan="6" align="center">Accetti le condizioni?</td>
+                </tr>
+                <tr>
+                    <td colspan="6" align="center"><input type="checkbox" name="tc"/>Accetto</td>
+                </tr>
+                <tr>
+                    <td colspan="6" align="right"><input type="submit" value="Registrati"/></td>
+                </tr>
             </table>
         </form>
     </p>
