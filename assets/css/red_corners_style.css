@@ -1,0 +1,55 @@
+html, body{
+    margin: 0px;
+}
+#corner{
+    display: inline-block;
+    border: 4px solid red;
+    padding: 5%;
+    position: relative;
+}
+#box{
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: 50px;
+    border: 4px solid black;
+    position: absolute;
+    background-image: url(/assets/images/66-665515_tame-impala-innerspeaker-wallpaper-innerspeaker-tame-impala-album.jpg);
+    background-size: cover;
+}
+#schema{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+#schema>.upperleft{
+    left: 0%;
+    top: 0%;
+    border-bottom: 0;
+    border-right: 0;
+    position: absolute;
+}
+#schema>.upperright{
+    right: 0%;
+    top: 0%;
+    border-bottom: 0;
+    border-left: 0;
+    position: absolute;
+}
+#schema>.lowerleft{
+    left: 0%;
+    bottom: 0%;
+    border-top: 0;
+    border-right: 0;
+    position: absolute;
+}
+#schema>.lowerright{
+    right: 0%;
+    bottom: 0%;
+    border-top: 0;
+    border-left: 0;
+    position: absolute;
+}
+
