@@ -1,13 +1,13 @@
 html, body{
     margin: 0;
     width: 100%;
-    height: 100%
+    height: 100%;
 }
 #terminal {
     width: 100%;
     height: 100%;
 }
-#terminal>.bar{
+#terminal .bar{
     background-color: rgb(55, 55, 55);
     border-radius: 20px;
     border-bottom-left-radius: 0;
@@ -17,6 +17,7 @@ html, body{
     position: relative;
 }
 #terminal .title{
+    display: block;
     color: white;
     text-shadow: 2px 2px black;
     position: absolute;

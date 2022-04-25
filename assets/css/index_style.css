@@ -1,0 +1,14 @@
+[href]{
+    text-decoration: unset;
+    color: red;
+}
+[href]:visited {
+    color: black;
+}
+[href]:hover {
+    color: aqua;
+}
+
+[href]:active {
+    color: blueviolet;
+}
