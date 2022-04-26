@@ -1,7 +1,7 @@
 html, body{
     margin: 0px;
 }
-#corner{
+.corner{
     display: inline-block;
     border: 4px solid red;
     padding: 48px; /* imposto 48px perché così il corner diventa 100x100 e il suo centro coincide con l'angolo della box */
@@ -24,28 +24,28 @@ html, body{
     height: 100%;
     position: absolute;
 }
-#schema>.upperleft{
+.corner.upperleft{
     left: 0%;
     top: 0%;
     border-bottom: 0;
     border-right: 0;
     position: absolute;
 }
-#schema>.upperright{
+.corner.upperright{
     right: 0%;
     top: 0%;
     border-bottom: 0;
     border-left: 0;
     position: absolute;
 }
-#schema>.lowerleft{
+.corner.lowerleft{
     left: 0%;
     bottom: 0%;
     border-top: 0;
     border-right: 0;
     position: absolute;
 }
-#schema>.lowerright{
+.corner.lowerright{
     right: 0%;
     bottom: 0%;
     border-top: 0;
