@@ -2,10 +2,14 @@ html, body{
     margin: 0;
     width: 100%;
     height: 100%;
+    background-color: blueviolet;
 }
 #terminal {
-    width: 100%;
-    height: 100%;
+    position: absolute;
+    width: 70%;
+    height: 70%;
+    top: 15%;
+    left: 15%;
 }
 #terminal .bar{
     background-color: rgb(55, 55, 55);
@@ -14,7 +18,8 @@ html, body{
     border-bottom-right-radius: 0;
     width: 100%;
     height: 40px;
-    position: relative;
+    position: absolute;
+    top: 0;
 }
 #terminal .title{
     display: block;
@@ -65,15 +70,16 @@ html, body{
 }
 
 #terminal .screen{
-    display: block;
     background-color: black;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font: 'Ubuntu Mono';
     font-size: 2%;
     font-weight: 400;
-
+    border-radius: 20px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
     color:rgb(0, 255, 0);
-    position: relative;
+    position: absolute;
     width: 100%;
     height: 100%;
 }
@@ -82,31 +88,19 @@ html, body{
     position: absolute;
     background-color: rgba(0, 0, 0, 0);
     border-color: black;
-    color: rgb(255, 255, 255);
-    text-indent: 265px;
+    color: rgb(0, 255, 0);
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font: 'Ubuntu Mono';
-    font-size: 25px;
-    min-height: 200px;
-    min-width: 150px;
+    font-size: 18px;
     font-weight: 400;
     resize: none;
     border: 0px;
     padding: 0;
     width: 100%;
-    height: 100%;
+    height: 94%;
+    top: 40px;
     outline: 0;
-    top: 5px;
+    word-break: break-all;
+
 }
 
-#terminal>.screen::before {
-    position: absolute;
-    content: 'w8floosh@SALINERI: $';
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font: 'Ubuntu Mono';
-    font-size: 25px;
-    font-weight: 400;
-    color: rgb(0, 255, 0);
-    top: 5px;
-    left: 5px;
-}
