@@ -1,0 +1,106 @@
+html, body{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-color: blueviolet;
+}
+#terminal {
+    position: absolute;
+    width: 70%;
+    height: 70%;
+    top: 15%;
+    left: 15%;
+}
+#terminal .bar{
+    background-color: rgb(55, 55, 55);
+    border-radius: 20px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    width: 100%;
+    height: 40px;
+    position: absolute;
+    top: 0;
+}
+#terminal .title{
+    display: block;
+    color: white;
+    text-shadow: 2px 2px black;
+    position: absolute;
+    top: 8px;
+    right: 0%;
+    left: 0%;
+    text-align: center;
+    font-size: larger;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+#terminal .button_close{
+    background-color: red;
+    color: white;
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    width: 25px;
+    height: 25px;
+    border: 1px solid darkred;
+    border-radius: 25px;
+}
+#terminal .button_close:hover{
+    background-color: lightcoral;
+}
+#terminal .button_close:active{
+    background-color: darkred;
+}
+#terminal .button_minimize{
+    background-color: darkgoldenrod;
+    color: white;
+    position: absolute;
+    top: 8px;
+    right: 40px;
+    width: 25px;
+    height: 25px;
+    border: 1px solid rgb(93, 68, 5);
+    border-radius: 25px;
+}
+#terminal .button_minimize:hover{
+    background-color: darkorange;
+}
+#terminal .button_minimize:active{
+    background-color: rgb(143, 79, 0);
+}
+
+#terminal .screen{
+    background-color: black;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font: 'Ubuntu Mono';
+    font-size: 2%;
+    font-weight: 400;
+    border-radius: 20px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    color:rgb(0, 255, 0);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#terminal textarea {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0);
+    border-color: black;
+    color: rgb(0, 255, 0);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font: 'Ubuntu Mono';
+    font-size: 18px;
+    font-weight: 400;
+    resize: none;
+    border: 0px;
+    padding: 0;
+    width: 100%;
+    /*height: 94%;*/
+    top: 40px;
+    outline: 0;
+    word-break: break-all;
+
+}
+
