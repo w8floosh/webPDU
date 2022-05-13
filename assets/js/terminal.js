@@ -28,21 +28,10 @@ function clear(){
 
 }
 function batman(){
-    /*var audio = document.createElement("audio");
-    audio.controls = false;
-    audio.src = "/assets/audio/batman.mp3";
-    var screen = document.getElementsByClassName("screen")[0];
-    screen.appendChild(audio);
-    audio.play();
-    audio.onended = function (e){
-        audio.remove();
-        clear();
-    }
-    */
     var video = document.createElement("video");
     video.controls = false;
     var sorgente = document.createElement("source");
-    sorgente.src = "/assets/media/batman_Trim.mp4";
+    sorgente.src = "/assets/media/video/batman.mp4";
     sorgente.type = "video/mp4";
     var screen = document.getElementsByClassName("screen")[0];
     screen.appendChild(video);
@@ -53,10 +42,26 @@ function batman(){
     video.style.height = "100%";
     video.style.objectFit = "fill";
     video.play();
-    video.onended = function (e){
+    video.onended = function (){
         video.remove();
         clear();
     }
+}
+
+function shutdown(){
+    var shutdown_audio = document.createElement("audio");
+    shutdown_audio.src = "/assets/media/audio/shutdown.mp3";
+    shutdown_audio.controls = false;
+    document.body.style.backgroundImage = "url('/assets/media/images/shutdown.jpg')";
+    document.body.style.backgroundSize = "contain";
+    document.body.style.backgroundColor = "none";
+    document.body.style.backgroundPosition = "center center";
+    shutdown_audio.play();
+    document.getElementById("terminal").remove();
+    shutdown_audio.onended = function (){
+        location.href = "index.html";
+    }
+
 }
 function parseCalc(text){
     var result = text[0];
@@ -94,16 +99,19 @@ function commandParser(toparse){
         break;
         case "help":
             echo( `Comandi disponibili: <br>
+            clear <br>
             echo text <br>
             calc num1 op num2 [op num3] [...] <br>
             batman <br>
-            clear`);
+            shutdown <br>`);
         break;
-        case "batman":  batman();
+        case "batman":      batman();
         break;
-        case "clear":   clear();
+        case "clear":       clear();
         break;
-        default:        echo("Comando sconosciuto");
+        case "shutdown":    shutdown();
+        break;
+        default:            echo("Comando sconosciuto");
         break;
     }
 }
