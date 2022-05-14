@@ -1,4 +1,7 @@
 var blocknum = 0;
+var started = false;
+
+
 function echo(toprint){
     var screen = document.getElementsByClassName("screen")[0];
     if (toprint != "<br>") blocknum++;
@@ -19,6 +22,7 @@ function echo(toprint){
         screen.removeChild(screen.firstElementChild);
     }
 }
+
 function clear(){
     var screen = document.getElementsByClassName("screen")[0];
     screen.replaceChildren();
@@ -27,7 +31,30 @@ function clear(){
     screen.removeChild(screen.firstElementChild);
 
 }
+
+function nanana(){
+    var container = document.getElementById("nanana");
+    if (container.children.length == 10)    container.removeChild(container.firstElementChild);
+    var na = document.createElement("div");
+    na.style.color = '#'+Math.floor(Math.random()*16777215).toString(16);
+    na.textContent = "NA";
+    na.style.textAlign = "center";
+    na.style.verticalAlign = "center";
+    container.appendChild(na);
+}
+
+function print_nanana(stop, interval){
+    if (!stop){
+        interval.value = setInterval(nanana, 50);
+        console.log(interval.value);
+    }
+    else            setTimeout(print_nanana, 1300, false, interval);      
+}
+
 function batman(){
+    var bg = setInterval( 
+        () => { document.body.style.backgroundColor = '#'+Math.floor(Math.random()*16777215).toString(16);}
+        , 200);
     var video = document.createElement("video");
     video.controls = false;
     var sorgente = document.createElement("source");
@@ -42,9 +69,20 @@ function batman(){
     video.style.height = "100%";
     video.style.objectFit = "fill";
     video.play();
+    var nanana_container = document.createElement("div");
+    nanana_container.id = "nanana";
+    document.body.prepend(nanana_container);
+    var interval = { value: 0 };
+
+    print_nanana(true, interval);
     video.onended = function (){
+        console.log(interval.value);
+        clearInterval(interval.value);
+        clearInterval(bg);
         video.remove();
         clear();
+        nanana_container.remove();
+        document.body.style.backgroundColor = "blueviolet";
     }
 }
 
@@ -63,6 +101,7 @@ function shutdown(){
     }
 
 }
+
 function parseCalc(text){
     var result = text[0];
     for (let i = 1; i < text.length-1; i=i+2){
@@ -87,7 +126,7 @@ function calc(num1, op, num2){
     }
     return risultato;
 }
-// 3 + 5 + 5 + 7
+
 function commandParser(toparse){
     if (toparse == "") return;
     var text = toparse.split(" ");
@@ -117,9 +156,10 @@ function commandParser(toparse){
 }
 
 
-
+var btn = document.getElementsByClassName("button_close")[0];
+btn.addEventListener("click", () => { shutdown(); });
 document.addEventListener("keypress", function (e){
-    if (e.code == "Enter"){
+    if (e.code == "Enter" && started){
         var text = document.getElementById("text" + blocknum);
         if (text.textContent == "") echo("<br>");
         text.contentEditable = false;
@@ -127,3 +167,14 @@ document.addEventListener("keypress", function (e){
         commandParser(toparse);
     }
 });
+
+document.addEventListener("keypress", function (e){
+    if (e.code == "Space" && !started){
+        var startup = new Audio("/assets/media/audio/startup.mp3");
+        startup.play();
+        startup.onended = () => {
+            document.getElementById("welcome").remove();
+            started = true;
+        }
+    }
+}, {once: true});
